@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Send } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 import { cn } from '../lib/utils';
 import tilletPattern from '../assets/tillet-pattern.png';
 

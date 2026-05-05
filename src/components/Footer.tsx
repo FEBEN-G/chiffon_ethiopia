@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Phone, Camera, Send, Mail, MapPin } from 'lucide-react';
+import { Phone, Camera, Send, MapPin } from 'lucide-react';
 import tilletPattern from '../assets/tillet-pattern.png';
 
 export function Footer() {
