@@ -33,7 +33,7 @@ export default function Home() {
           <div className="absolute inset-0 opacity-[0.03] tillet-overlay" />
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 flex flex-col md:flex-row items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 flex flex-col md:flex-row items-center justify-between pt-32 md:pt-0">
           {/* Text Content */}
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
@@ -49,7 +49,7 @@ export default function Home() {
             >
               New Collection 2026
             </motion.span>
-            <h1 className="text-7xl md:text-9xl font-serif font-bold text-charcoal mb-4 leading-none tracking-tighter">
+            <h1 className="text-6xl sm:text-7xl md:text-9xl font-serif font-bold text-charcoal mb-4 leading-none tracking-tighter">
               Chiffon
             </h1>
             <p className="text-xl md:text-2xl font-sans text-charcoal/80 mb-8 tracking-wide uppercase">
@@ -72,7 +72,7 @@ export default function Home() {
           </motion.div>
 
           {/* Image Slider */}
-          <div className="relative w-full md:w-1/2 h-[50vh] md:h-[80vh] mt-12 md:mt-0">
+          <div className="relative w-full md:w-1/2 h-[40vh] sm:h-[50vh] md:h-[80vh] mt-8 md:mt-0">
             <AnimatePresence mode="wait">
               <motion.img
                 key={currentIndex}
