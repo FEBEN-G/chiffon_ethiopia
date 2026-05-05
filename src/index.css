@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #F8F5F0;
+  --color-gold: #D4AF37;
+  --color-charcoal: #2B2B2B;
+  --color-beige: #EFE7DC;
+  --color-olive: #3E5C4B;
+
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Poppins", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-cream text-charcoal font-sans;
+    margin: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .tillet-overlay {
+    position: relative;
+    background-image: url('/src/assets/tillet-pattern.png');
+    background-repeat: repeat;
+    background-size: 200px;
+  }
+
+  .tillet-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(248, 245, 240, 0.4); /* High transparency to ensure pattern is visible */
+    pointer-events: none;
+  }
+
+  .tillet-overlay-gold::before {
+    background: rgba(212, 175, 55, 0.15); /* Soft Gold overlay */
+  }
+
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  .text-shadow-elegant {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+}
