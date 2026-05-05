@@ -26,33 +26,34 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-cream">
+      <section className="relative h-screen flex flex-col md:flex-row items-center justify-center overflow-hidden bg-cream">
         {/* Background Gradient & Pattern */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-cream via-beige/40 to-cream" />
           <div className="absolute inset-0 opacity-[0.03] tillet-overlay" />
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 flex flex-col md:flex-row items-center justify-between pt-32 md:pt-0">
+        {/* Mobile: stacked full-screen layout | Desktop: side-by-side */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 h-full flex flex-col md:flex-row items-center justify-between pt-24 pb-6 md:pt-0 md:pb-0">
           {/* Text Content */}
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="max-w-2xl text-center md:text-left z-20"
+            className="max-w-2xl text-center md:text-left z-20 flex-shrink-0"
           >
             <motion.span 
               key={currentIndex + "-tag"}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-gold font-sans font-bold tracking-[0.3em] uppercase text-sm mb-4 block"
+              className="text-gold font-sans font-bold tracking-[0.3em] uppercase text-xs md:text-sm mb-2 md:mb-4 block"
             >
               New Collection 2026
             </motion.span>
-            <h1 className="text-6xl sm:text-7xl md:text-9xl font-serif font-bold text-charcoal mb-4 leading-none tracking-tighter">
+            <h1 className="text-5xl sm:text-6xl md:text-9xl font-serif font-bold text-charcoal mb-2 md:mb-4 leading-none tracking-tighter">
               Chiffon
             </h1>
-            <p className="text-xl md:text-2xl font-sans text-charcoal/80 mb-8 tracking-wide uppercase">
+            <p className="text-base md:text-2xl font-sans text-charcoal/80 mb-4 md:mb-8 tracking-wide uppercase">
               Elegance Woven with Ethiopian Heritage
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
@@ -72,7 +73,7 @@ export default function Home() {
           </motion.div>
 
           {/* Image Slider */}
-          <div className="relative w-full md:w-1/2 h-[40vh] sm:h-[50vh] md:h-[80vh] mt-8 md:mt-0">
+          <div className="relative w-full md:w-1/2 flex-1 md:flex-none md:h-[80vh] mt-4 md:mt-0 min-h-0">
             <AnimatePresence mode="wait">
               <motion.img
                 key={currentIndex}
